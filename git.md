@@ -23,6 +23,7 @@ git config user.name
 git config user.email
 
 # 6 利用Git从本地上传到GitHub
+```
 git init+git remote add origin git@github.com:yourName/yourRepo.git+ git add xxx+git commit -m "this is for test"+git push origin master
 ```
 https://zhuanlan.zhihu.com/p/37685863
