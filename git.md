@@ -33,3 +33,22 @@ https://zhuanlan.zhihu.com/p/37685863
 在官网下载tomcat9.0.10然后放入本地文件夹，进行配置，只需要在/tomcat7/bin 下，编catalina.sh文件，插入JAVA_HOME=/opt/jdk1.6.0_22，注意需要给tomcat文件夹权限，否则idea没法导入tomcat           //--此处依你的jdk安装目录而定
 ```
 
+```
+alter table user_info add password Varchar(10) not null 向表格中扩展一个password字段
+```
+
+```
+WriteNullListAsEmpty  ：List字段如果为null,输出为[],而非null
+WriteNullStringAsEmpty ： 字符类型字段如果为null,输出为"",而非null
+DisableCircularReferenceDetect ：消除对同一对象循环引用的问题，默认为false（如果不配置有可能会进入死循环）
+WriteNullBooleanAsFalse：Boolean字段如果为null,输出为false,而非null
+WriteMapNullValue：是否输出值为null的字段,默认为false
+链接：https://juejin.im/post/5ad811e66fb9a0460138ceb1
+来源：掘金
+
+```
+
+```
+自动生成dao,model,xml文件，首先需要在sql中sql语句写好，建行数据库表，然后创建core→constant→ProjectConstant，这步操作只需要一次就好，接着创建src\test\java\com\example\demo\CodeGenerator.java，在这步只需要修改其中的表名就可以了，配置文件此处省略，详情见掘金网
+```
+
