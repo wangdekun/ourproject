@@ -51,4 +51,17 @@ WriteMapNullValue：是否输出值为null的字段,默认为false
 ```
 自动生成dao,model,xml文件，首先需要在sql中sql语句写好，建行数据库表，然后创建core→constant→ProjectConstant，这步操作只需要一次就好，接着创建src\test\java\com\example\demo\CodeGenerator.java，在这步只需要修改其中的表名就可以了，配置文件此处省略，详情见掘金网
 ```
+```
+第一个springboot项目启动报错Failed to configure a DataSource: 'url' attribute is not specified and no embedde
+=====>出现这个时需要在项目的springboot改为@SpringBootApplication(exclude = DataSourceAutoConfiguration.class)
+```
+
+```
+ubuntu18.04如果直接安装mysql则是5.9版本,而且因为ubuntu版本太高,会不提示输入mysql密码,因此,去http://dev.mysql.com/downloads/repo/apt/.下载一个mysql-apt-config_0.*.****_all.deb，使用
+sudo dpkg -i mysql-apt-config_0.*.****_all.deb
+安装执行，选择MySQL8.0，OK。
+然后apt update一下,再安装mysql才可以
+```
+
+
 
